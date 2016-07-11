@@ -1,0 +1,261 @@
+html {
+  font-family: Arial;
+}
+* { 
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  -webkit-user-drag: none;
+}
+
+
+
+
+.game{
+  position: relative;
+  margin: 0 auto;
+
+  -webkit-perspective: 500px;
+  -moz-perspective: 500px;
+  perspective: 500px;
+
+  -webkit-perspective-origin: center;
+  -moz-perspective-origin: center;
+  perspective-origin: center;
+}
+
+.gameOver{
+  z-index: 5;
+  position:absolute;
+  top: 50%; left: 50%;
+  opacity: 0;
+
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: rotate3d(0.37, 0.62, 0, 90deg) translate3d(-72px, -30px, -164px);
+
+  -webkit-transition: -webkit-transform 0.3s ease-out, opacity 0.1s ease-out;
+  transition: transform 0.2s ease-out;
+
+
+  margin: -25% 0 0 -25%;
+
+  text-align: center;
+
+  background: white;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+
+  border-radius: 0.2em;
+  border: 1px solid #c3c3c3;
+}
+.gameOver.show{
+  opacity: 1;
+  -webkit-transform: rotate3d(0.37, 0.62, 0, 0) translate3d(0, 0, 0);
+}
+.gameOver input{
+  padding: 0.6em;
+  font-size: inherit;
+  background: #3ea5e7;
+  color: white;
+  border: none;
+  border-radius: 0.2em;
+}
+
+
+
+.blocks{
+}
+
+.box{
+  border: 10px solid #fff;
+  background: #dfefff;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+.block{
+  z-index: 2;
+  position: absolute;
+
+  text-align: center;
+  font-family: arial;
+  font-weight: bold;
+
+  border-radius: 13%;
+  border-bottom: 3px solid gray;
+
+  color: gray;
+  background: white;
+
+  /* animation speeds */
+  -webkit-transition: -webkit-transform 0.2s ease-out, opacity 0.2s ease-in;
+  transition: transform 0.2s ease-out, opacity 0.2s ease-in;
+
+  /* Initial position */
+  -webkit-transform: translate3d(0,0,0) scale3d(0.5,0.5,0.5);
+  -ms-transform: translate3d(0,0,0) scale3d(0.5,0.5,0.5);
+  transform: translate3d(0,0,0) scale3d(0.5,0.5,0.5);
+}
+
+.block span{
+  position: absolute;
+  top: 50%;
+  left:0; right:0;
+}
+
+
+/*.justSpawned{
+  opacity:0;
+}*/
+.toRemove{
+  z-index: 1;
+  opacity: 0;
+}
+.toCombine{
+  z-index: 2;
+}
+.block1{
+  background: #f04857;
+  border-color: #d12938;
+  color: white;
+}
+.block2{
+  background: #3ea5e7;
+  border-color: #1f86c8;
+  color: white;
+}
+.block3{
+  background: #a55a02;
+  border-color: #863b00;
+  color: white;
+}
+
+
+.block6{
+  background: #d2860f;
+  border-color: #b36700;
+  color: white;
+}
+.block12{
+  background: #ffa200;
+  border-color: #e08300;
+  color: white;
+}
+.block24{
+  background: #ff7800;
+  border-color: #e05900;
+  color: white;
+}
+
+
+.block48{
+  background: #9dc400;
+  border-color: #7ea500;
+  color: white;
+}
+.block96{
+  background: #24c813;
+  border-color: #05a900;
+  color: white;
+}
+.block192{
+  background: #1375da;
+  border-color: #0056bb;
+  color: white;
+}
+
+
+.block384{
+  background: #714df7;
+  border-color: #522ed8;
+  color: white;
+}
+.block768{
+  background: #3cd;
+  border-color: #09a;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#tapStart,
+#tapEnd{
+  display: none;
+  border-radius: 50%;
+  position:absolute;
+  width:10px;height:10px;
+  margin: -5px 0 0 -5px;
+  font-size: 9px; color:white;
+}
+#tapStart{
+  background: green;
+}
+#tapEnd{
+  background: red;
+}
+.debug #tapStart,
+.debug #tapEnd{
+  display: block;
+}
+
+
+
+
+
+/*  12 COLUMN : RESPONSIVE GRID SYSTEM
+  DEVELOPER : DENIS LEBLANC
+  URL : http://responsive.gs
+  VERSION : 3.0
+  LICENSE : GPL & MIT */
+
+
+
+/*  SELF CLEARING FLOATS - CLEARFIX METHOD */
+.container:after,
+.row:after, 
+.col:after, 
+.clr:after, 
+.group:after { 
+  content: ""; 
+  display: table; 
+  clear: both; 
+}
+
+/*  DEFAULT ROW STYLES 
+  Set bottom padding according to preference */
+.row {
+  padding-bottom: 0em;
+}
+      
+                  
+/* DEFAULT COLUMN STYLES */
+.col { 
+  display: block;
+  float: left;
+  width: 100%;
+}
+
+@media ( min-width : 768px ) {
+  
+  .gutters .col {
+    margin-left: 2%;
+  }
+  
+  .gutters .col:first-child { 
+    margin-left: 0; 
+  }
+}
+
+.span_1 { width: 25%; }
+.span_2 { width: 50%; }
+.span_3 { width: 75%; }
+.span_4 { width: 100%; }

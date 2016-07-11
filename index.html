@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Threes clone</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+</head>
+<body>
+
+  <div id="tapStart"></div>
+  <div id="tapEnd"></div>
+  <div id="tapDir"></div>
+
+  <div class="game">
+
+    <div class="gameOver">
+      <h2>GAME OVER</h2>
+
+      <p><input type="button" value="PLAY AGAIN" id="btnPlayAgain"></p>
+      <p>or hit any key</p>
+    </div>
+
+    <div class="blocks"></div>
+
+    <div class="grid">
+
+      <div class="row">
+        <div class="col span_1">
+          <div class="box"></div>
+        </div>
+        <div class="col span_1">
+          <div class="box"></div>
+        </div>
+        <div class="col span_1">
+          <div class="box"></div>
+        </div>
+        <div class="col span_1">
+          <div class="box"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col span_1">
+          <div class="box"></div>
+        </div>
+        <div class="col span_1">
+          <div class="box"></div>
+        </div>
+        <div class="col span_1">
+          <div class="box"></div>
+        </div>
+        <div class="col span_1">
+          <div class="box"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col span_1">
+          <div class="box"></div>
+        </div>
+        <div class="col span_1">
+          <div class="box"></div>
+        </div>
+        <div class="col span_1">
+          <div class="box"></div>
+        </div>
+        <div class="col span_1">
+          <div class="box"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col span_1">
+          <div class="box"></div>
+        </div>
+        <div class="col span_1">
+          <div class="box"></div>
+        </div>
+        <div class="col span_1">
+          <div class="box"></div>
+        </div>
+        <div class="col span_1">
+          <div class="box"></div>
+        </div>
+      </div>
+
+    </div><!-- eof GRID -->
+
+  </div><!-- oef GAME -->
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="game.js"></script>
+  <script type="text/javascript" src="tests.js"></script>
+
+</body>
+</html>
